@@ -3,6 +3,7 @@
 # Scrapy settings for dome_project project
 #
 # For simplicity, this file contains only settings considered important or
+# For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
 #
 #     http://doc.scrapy.org/en/latest/topics/settings.html
@@ -13,13 +14,14 @@ BOT_NAME = 'dome_project'
 
 SPIDER_MODULES = ['dome_project.spiders']
 NEWSPIDER_MODULE = 'dome_project.spiders'
-
+setting_day = 2
+setting_mon = 9
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'dome_project (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+# ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
