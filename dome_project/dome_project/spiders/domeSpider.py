@@ -31,3 +31,19 @@ class domeSpider(scrapy.Spider):
             next_url = response.xpath('//i[@class="fa fa-angle-right"]/../@href').extract()[0]
             print next_url
             yield scrapy.Request(url = next_url,callback=self.parse)
+       
+       
+            
+class jiandanSpider(scrapy.Spider):
+    headers = {
+
+        'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    }
+    name = 'jiandan'
+    url = 'http://jandan.net/'+setting_jiandan
+
+    def start_requests(self):
+        print self.url
+        yield scrapy.Request(url = self.url,headers = self.headers,callback=self.parse)
+    def parse(self,response):
+        print response.url
